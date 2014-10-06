@@ -10,7 +10,7 @@ class SmallSMILHandler(ContentHandler):
         self.tags = ['root-layout', 'region', 'img', 'audio', 'textstream']
         self.attrs = {
             'root-layout': ['width', 'height', 'background-color'],
-            'region': ['top', 'bottom', 'left', 'right'],
+            'region': ['id','top', 'bottom', 'left', 'right'],
             'img': ['src', 'region', 'begin', 'dur'],
             'audio': ['src', 'begin', 'dur'],
             'textstream': ['src', 'region']
