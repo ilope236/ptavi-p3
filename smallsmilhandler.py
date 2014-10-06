@@ -26,6 +26,7 @@ class SmallSMILHandler(ContentHandler):
 
     def get_tags(self):
         return self.lista_dic
+
 if __name__ == "__main__":
     parser = make_parser()
     sHandler = SmallSMILHandler()
