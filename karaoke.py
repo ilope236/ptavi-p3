@@ -33,7 +33,6 @@ class KaraokeLocal():
                     diccionario[key] = lista_barras[-1]
 
 if __name__ == "__main__":
-
     try:
         fichero = sys.argv[1]
     except IndexError:
@@ -42,6 +41,5 @@ if __name__ == "__main__":
 
     karaoke = KaraokeLocal(fichero)
     karaoke.__str__()
-    print
     karaoke.do_local()
     karaoke.__str__()
