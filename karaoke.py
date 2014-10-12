@@ -11,7 +11,7 @@ try:
 except IndexError:
     print "Usage: python karaoke.py file.smil."
     raise SystemExit
-    
+
 parser = make_parser()
 sHandler = smallsmilhandler.SmallSMILHandler()
 parser.setContentHandler(sHandler)
@@ -23,5 +23,5 @@ for diccionario in lista_dic:
     print diccionario['name'] + "\t",
     for key in diccionario:
         if key != 'name' and diccionario[key] != "":
-            print key+"="+diccionario[key]+ "\t",
+            print key + "=" + diccionario[key] + "\t",
     print
