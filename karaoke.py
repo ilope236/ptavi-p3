@@ -17,12 +17,15 @@ class KaraokeLocal():
         self.lista_dic = sHandler.get_tags()
 
     def __str__(self):
-        for diccionario in self.lista_dic:
-            print diccionario['name'] + "\t",
-            for key in diccionario:
-                if key != 'name' and diccionario[key]:
-                    print key + "=" + diccionario[key] + "\t",
-            print
+        str_total = ""
+        for dicc in self.lista_dic:
+            etiqueta = dicc['name']
+            attr = ""
+            for key in dicc:
+                if key != 'name' and dicc[key]:
+                    attr = attr + '\t' + key + "=" + '"' + dicc[key] + '"'
+            str_total = str_total + etiqueta + attr + '\n'
+        return str_total
 
     def do_local(self):
         for diccionario in self.lista_dic:
@@ -40,6 +43,6 @@ if __name__ == "__main__":
         raise SystemExit
 
     karaoke = KaraokeLocal(fichero)
-    karaoke.__str__()
+    print karaoke
     karaoke.do_local()
-    karaoke.__str__()
+    print karaoke
